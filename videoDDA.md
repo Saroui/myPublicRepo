@@ -20,10 +20,10 @@ En su estructura inicial la DDR RAM se organiza en filas o en peceras de memoria
 
 Esto es obviamente algo que va a aumentar con respecto a cada versión nueva de la interfaz, ya que en lo que se centran es en aumentar la capacidad de transferencia y por lo tanto necesitan de muchas más filas y bancos para lograr con estos cometidos.
 
-###¿Cómo accede a la información?
+### ¿Cómo accede a la información?
 Siguiendo con la estructura y acceso a la información en este tipo de tecnologías, se debe conocer la dirección de la fila y el banco al que uno quiere acceder mediante un registro, aparte de esto el procesador estará conectado al chip de selección qué al final con el antes mencionado registro accederá a la información en un banco. Por lo general estos bancos y registros se organizan de manera contigua o continua  ya que esto permite rapidez al procesador a la hora de buscar la fila y el banco en el que se encuentra la información o proceso que se necesita.
 
-##¿Que diferencia hay entre sus diferentes versiones?
+## ¿Que diferencia hay entre sus diferentes versiones?
 
 
 
