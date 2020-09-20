@@ -79,8 +79,7 @@ class MainActivity : AppCompatActivity() {
                     text.setText(response)
                     Toast.makeText(getApplicationContext(), "Succesful register", Toast.LENGTH_SHORT).show()
                     if (response == "User already exists"){
-                        Toast.makeText(getApplicationContext(), "Use alredy exists", Toast.LENGTH_SHORT).show()
-                        println("Entro")
+                        Toast.makeText(getApplicationContext(), "User alredy exists", Toast.LENGTH_SHORT).show()
                     }
                 }
 
