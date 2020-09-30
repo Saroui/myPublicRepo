@@ -11,7 +11,16 @@ fun PortArduino(): String{
     var response = bufferedReader.readText()
 
 
-    return response
+    if (response == "No boards found.\n"){
+        return "No board on system.."
+    }else{
+        response = response.split("/dev/")[1]
+        response = response.split(" Serial Port")[0]
+        response
+
+        return "/dev/" + response
+    }
+
 }
 
 fun UploadIno(sketch: String, Arduino: String): String{
@@ -24,6 +33,7 @@ fun UploadIno(sketch: String, Arduino: String): String{
 
 
     return response
+
 
 }
 
@@ -39,9 +49,15 @@ fun CompileIno(sketch: String): String{
     return response
 
 }
-fun main(){
-    var compiled = CompileIno("/home/saroui/Documentos/blink.ino")
-    var response = UploadIno("/home/saroui/blink.ino","/dev/ttyACM0")
-
+fun main() {
+    var port = PortArduino()
+    var compiled = CompileIno("/home/saroui/blink/blink.ino")
     println(compiled)
+    if (!(compiled.isEmpty()) or (port == "No board on system..")) {
+        println("Error compiling or uploading...")
+    } else{
+        var uploaded = UploadIno("/home/saroui/blink/blink.ino", port)
+        println(uploaded)
+    }
+
 }
