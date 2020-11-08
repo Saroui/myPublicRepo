@@ -67,3 +67,5 @@ A continuación describiremos los tipos de Tramas que hay en la tecnología y pa
 [5]"3.1.2.2 Encapsulación HDLC", Itesa.edu.mx, 2020. [Online]. Available: https://www.itesa.edu.mx/netacad/networks/course/module3/3.1.2.2/3.1.2.2.html. [Accessed: 08- Nov- 2020].
 
 [6]"3.1.2.3 Tipos de tramas HDLC", Itesa.edu.mx, 2020. [Online]. Available: https://www.itesa.edu.mx/netacad/networks/course/module3/3.1.2.3/3.1.2.3.html. [Accessed: 08- Nov- 2020].
+
+[7]INTRODUCCIÓN A H.D.L.C., 8th ed. Valladolid: Escuela Técnica Superior de Ingenieros de Telecomunicación Universidad de Valladolid. Available: http://www.tel.uva.es/personales/aritt/material/apuntes_hdlc.pdf
