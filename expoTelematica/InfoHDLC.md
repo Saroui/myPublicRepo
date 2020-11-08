@@ -17,7 +17,25 @@ Como tal HDLC presenta tres estaciones que trabajan en conjunto para que la tecn
 ![Esta es una imagen ilustrativa de la configuración](https://github.com/Saroui/myPublicRepo/blob/master/expoTelematica/Selecci%C3%B3n_018.png)
 
 
-* Configuracion balanceada o equilibrada:
+* Configuracion balanceada o equilibrada: Es la comunicación entre dos estaciones combinadas. Permite enlace punto a punto, por duplex o half-duplex, ambas estaciones tienen la misma responsabilidad.
+
+![Esta es una imagen ilustrativa de la configuración](https://github.com/Saroui/myPublicRepo/blob/master/expoTelematica/Selecci%C3%B3n_019.png)
+
+A continucación y para mostrar los tres modos de trasnferencia de datos se aprovechara para resumir tambien el modo de operación.
+
+### Modos de operación
+
+#### Modo de iniciar
+
+Depende de la implementación y no hay una inicicación normativa, sin embargo se tiene que tener en cuenta de que solo las estaciones primarias y las estaciones combinadas son las capaces de establecer la iniciación en de la comunicación en los enlaces.
+
+#### Modo de transferencias de datos
+
+* Modo de respuesta normal(NRM): La configuración del enlace para este modo es no balanceada. Se puede usar como punto a punto o Multipunto con transmisiones Duplex o Half-Duplex. Aca la estación primaria es la que inicia la transmisión de datos y la estación secundiara solo puede transmitir datos a partir de las respuestas que genere de las ordenes que llegen de la estacion primaria.
+
+* Modo de respuesta asincrona Balanceada(ABM): La configuración del enlace es balanceada.  El enlace nada más es punto a punto, pero la transmisión puede ser duplex(por defecto) o semiduplex. En este modo cualquier estación combinada puede transmitir sin necesidad de tener una orden o permiso de la otra estación combinada.
+
+* Modo de respuesta asincrona(ARN): 
 
 ## Referencias
 [1]"Synchronous Data Link Control", Es.wikipedia.org, 2020. [Online]. Available: https://es.wikipedia.org/wiki/Synchronous_Data_Link_Control. [Accessed: 08- Nov- 2020].
