@@ -51,6 +51,8 @@ A continuación examinaremos la trama de HDLC.
 
 A continuación se explicara cada segmento que tiene la bandera HDLC:
 
+![Esta es una imagen ilustrativa de la trama HDLC](https://github.com/Saroui/myPublicRepo/blob/master/expoTelematica/Selecci%C3%B3n_022.png)
+
 * Señalizador:  Es el campo de 8 bits con el que cualquier trama HDLC debe empezar y acabar, ya que se relaciona con la señalización y verificacion  de errores,para que los siguientes segmentos en una trama no se confundan con el guión final se usa Dentro  la  técnica  de  inserción  de  bit  (bit  stuffing).  El  funcionamiento  es  muy  simple.  El  transmisor  inserta  un  cero  después  de  cualquier  secuencia  de  cinco  "unos"  seguidos  que  vaya  a  enviar,  excepto  en  el  guión  de  principio y final de trama. En recepción se monitoriza continuamente el flujo de bits que  se  reciben.  Cuando  se  recibe  un  "cero"  seguido  por  cinco  "unos"  se  mira  el  siguiente bit (el séptimo). Si es un "cero" el bit se deshecha pues es producto de una inserción de bit. Si es un "uno" se observa el siguiente bit (el octavo). Si es un cero se  reconoce  un  guión.  Si  es  un  uno  es  que  se  trata  de  una  señal  de  abortar  o  de  enlace inactivo. El enlace por lo general tiene tres secuencias que puede detectar para motivos de enlace: 01111110 para el señalizador, entre 7 y 15 unos para ABORTAR el enlace, y quince unos seguidos o más para reportar el enlace como inactivo.
 
 * Dirección: Es el campo en donde se coloca la estación secundaria o combinada que envia o recibe el mensaje. En las ordenes van las direcciones de las estaciones detinatarias y en las respuestas las direcciones de las estaciones remitentes. Existen dos modos de direccionamiento: monoocteto y multiocteto. Debe establecerse el modo de direccionamiento a utilizar antes de comenzar la transferencia de datos. 
@@ -59,9 +61,22 @@ A continuación se explicara cada segmento que tiene la bandera HDLC:
 
   * multiocteto:  nos  va  a  permitir  utilizar  más  de  256  estaciones  al  especificar  la  dirección con dos octetos o más. Se utiliza el primer bit de cada uno de los octetos para indicar si es el último octeto del campo de dirección. El octeto final debe llevar el primer bit a "uno" mientras que los octetos precedentes lo llevan a "cero". 
 
-También se permiten direcciones de difusión (broadcasting). Estas últimas usadas para referirse a todas las estaciones colocando todos los bits del campo de dirección a "uno". 
+Por esto podemos decir de que este segmento de  Dirección puede tener desde uno a mas bytes.También se permiten direcciones de difusión (broadcasting). Estas últimas usadas para referirse a todas las estaciones colocando todos los bits del campo de dirección a "uno". 
+
+* Contról: Este segmento cambia dependiendo del tipo de trama HDLC que sea, tramas HDLC hay tres y son las siguientes:
+
+ * Trama de Información: transportan información de capa superior y determinada información de control.
+ * Trama de Supervisión: proporcionan información de control. Las tramas S pueden solicitar y suspender la transmisión, informar sobre el estado y confirmar la recepción de las tramas I.
+ * Tramas sin numerar: las tramas U admiten funciones de control y no son secuenciales.
+ 
+ ![Esta es una imagen ilustrativa de la trama HDLC](https://github.com/Saroui/myPublicRepo/blob/master/expoTelematica/Selecci%C3%B3n_023.png)
 
 
+* Protocolo(Solo trama HDLC Cisco): Especifica el protocolo encapsulado dentro de la información del trama.
+
+* Información: Contiene la información que en este caso seria el encapsulado de capa 3 y dentro de este el encapsulado de capa 4.
+
+* Secuencia de verificación de trama (FCS, Frame Check Sequence): La FCS precede al delimitador del indicador de fin y generalmente es un resto del cálculo de la comprobación de redundancia cíclica (CRC). El cálculo de CRC se vuelve a realizar en el receptor. Si el resultado difiere del valor en la trama original, se supone que existe un error.
 
 
 
