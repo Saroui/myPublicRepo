@@ -65,9 +65,9 @@ Por esto podemos decir de que este segmento de  Dirección puede tener desde uno
 
 * Contról: Este segmento cambia dependiendo del tipo de trama HDLC que sea, tramas HDLC hay tres y son las siguientes:
 
- * Trama de Información: transportan información de capa superior y determinada información de control.
- * Trama de Supervisión: proporcionan información de control. Las tramas S pueden solicitar y suspender la transmisión, informar sobre el estado y confirmar la recepción de las tramas I.
- * Tramas sin numerar: las tramas U admiten funciones de control y no son secuenciales.
+  * Trama de Información: transportan información de capa superior y determinada información de control.
+  * Trama de Supervisión: proporcionan información de control. Las tramas S pueden solicitar y suspender la transmisión, informar sobre el estado y confirmar la recepción de las tramas I.
+  * Tramas sin numerar: las tramas U admiten funciones de control y no son secuenciales.
  
  ![Esta es una imagen ilustrativa de la trama HDLC](https://github.com/Saroui/myPublicRepo/blob/master/expoTelematica/Selecci%C3%B3n_023.png)
 
