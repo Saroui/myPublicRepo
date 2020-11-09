@@ -55,9 +55,9 @@ A continuación se explicara cada segmento que tiene la bandera HDLC:
 
 * Dirección: Es el campo en donde se coloca la estación secundaria o combinada que envia o recibe el mensaje. En las ordenes van las direcciones de las estaciones detinatarias y en las respuestas las direcciones de las estaciones remitentes. Existen dos modos de direccionamiento: monoocteto y multiocteto. Debe establecerse el modo de direccionamiento a utilizar antes de comenzar la transferencia de datos. 
 
-** monoocteto:  se  emplea  un  solo  octeto  podemos  direccionar  hasta  256  estaciones.  Para    tener    una    mayor    capacidad    de    direccionamiento    se    debe    usar    el    direccionamiento multiocteto. 
+  * monoocteto:  se  emplea  un  solo  octeto  podemos  direccionar  hasta  256  estaciones.  Para    tener    una    mayor    capacidad    de    direccionamiento    se    debe    usar    el    direccionamiento multiocteto. 
 
-** multiocteto:  nos  va  a  permitir  utilizar  más  de  256  estaciones  al  especificar  la  dirección con dos octetos o más. Se utiliza el primer bit de cada uno de los octetos para indicar si es el último octeto del campo de dirección. El octeto final debe llevar el primer bit a "uno" mientras que los octetos precedentes lo llevan a "cero". 
+  * multiocteto:  nos  va  a  permitir  utilizar  más  de  256  estaciones  al  especificar  la  dirección con dos octetos o más. Se utiliza el primer bit de cada uno de los octetos para indicar si es el último octeto del campo de dirección. El octeto final debe llevar el primer bit a "uno" mientras que los octetos precedentes lo llevan a "cero". 
 
 También se permiten direcciones de difusión (broadcasting). Estas últimas usadas para referirse a todas las estaciones colocando todos los bits del campo de dirección a "uno". 
 
