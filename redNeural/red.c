@@ -14,3 +14,13 @@ int main(){
 float multiMat(float *X, float *B, int n, int m){
     return 0;
 }
+
+float sumMat(float *X, float *Y,float *Z, int n, int m){
+    int i, j;
+
+    for(i = 0; i<n; i++){
+        for(j = 0; j<m; j++){
+            Z[i][j] = X[i][j] + Y[i][j];
+        }
+    }
+}
