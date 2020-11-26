@@ -4,6 +4,9 @@
 #define N 2
 #define M 4
 
+float **initialize(int f, int c);
+float **sumMatrix(float **A, float **B, int f, int c);
+
 int main(){
     float X[N][M] = {{0,0,1,1},{0,1,0,1}};
     float Y[M] = {0,1,1,0};
@@ -11,16 +14,22 @@ int main(){
     return 0;
 }
 
-float multiMat(float *X, float *B, int n, int m){
-    return 0;
+
+float **initialize(int f, int c) {
+    float **matrix =(float **)malloc(sizeof(float*)*f);
+    for (int i = 0; i<f;i++){
+        matrix[i] = (float*)malloc(sizeof(float)*c);
+    }
+    return matrix;
 }
 
-float sumMat(float *X, float *Y,float *Z, int n, int m){
-    int i, j;
-
-    for(i = 0; i<n; i++){
-        for(j = 0; j<m; j++){
-            Z[i][j] = X[i][j] + Y[i][j];
+float **sumMatrix(float **A, float **B, int f, int c){
+    float **sum = initialize(f,c);
+    for (int i = 0; i<f; i++){
+        for(int j = 0; j<c; j++){
+            sum[i][j] = A[i][j] + B[i][j];
         }
     }
+    return sum;
 }
+
