@@ -7,6 +7,7 @@
 float **initialize(int f, int c);
 float **sumMatrix(float **A, float **B, int f, int c);
 float **multMatrix(float **A, float **B, int fa, int fb, int ca, int cb);
+float **maxMatrix(float **A, float **B, int f, int c);
 
 int main(){
     float X[N][M] = {{0,0,1,1},{0,1,0,1}};
@@ -54,4 +55,19 @@ float **multMatrix(float **A, float **B, int fa, int fb, int ca, int cb){
     
     return C;
 }
+
+float **maxMatrix(float **A, float **B, int f, int c){
+    float **res = initialize(f,c);
+    for(int j = 0; j<f; j++){
+        for(int i = 0; i<c; i++){
+            if(A[j][i] > B[j][i]){
+                res[j][i] = A[j][i];
+            }else if(B[j][i] > A[j][i]){
+                res[j][i] = B[j][i];
+            }
+        }
+    }
+    return res;
+}
+
 
