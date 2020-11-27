@@ -8,6 +8,8 @@ float **initialize(int f, int c);
 float **sumMatrix(float **A, float **B, int f, int c);
 float **multMatrix(float **A, float **B, int fa, int fb, int ca, int cb);
 float **maxMatrix(float **A, float **B, int f, int c);
+float exponential(float x);
+float **sigmoide(float ** A, int f, int c);
 
 int main(){
     float X[N][M] = {{0,0,1,1},{0,1,0,1}};
@@ -70,4 +72,22 @@ float **maxMatrix(float **A, float **B, int f, int c){
     return res;
 }
 
+float exponential(float x){
+    float out=0;
+    int n=15;
+    for(int i=0;i<n;i++){
+        out+=(pow(x,i)/factorial(i));
+    }
+    return out;
+}
+
+float **sigmoide(float ** A, int f, int c){
+    float **out=initialize(f,c);
+    for(int i=0;i<f;i++){
+        for(int j=0;j<c;j++){
+            out[i][j]=1/(1+exponential(-A[i][j]));
+        }
+    }
+    return out;
+}
 
