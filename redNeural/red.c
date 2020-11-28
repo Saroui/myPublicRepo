@@ -93,7 +93,7 @@ int main(){
     // A3 = sigmoide(Z3,1,4);
     for (int c = 0; c<1; c++){
         for(int d = 0; d<4; d++){
-            printf("%f \n",A3[c][d]);
+            printf("%f \n",Z3[c][d]);
         }
     }
     
@@ -112,7 +112,7 @@ double **sumMatrix(double **A, double **B, int f, int c){
     double **sum = initialize(f,c);
     for (int i = 0; i<f; i++){
         for(int j = 0; j<c; j++){
-            sum[i][j] = A[i][j] + B[i][j];
+            sum[i][j] = A[i][j] + B[i][0];
         }
     }
     return sum;
