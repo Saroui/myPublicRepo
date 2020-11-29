@@ -90,7 +90,7 @@ int main(){
     // A3 = sigmoide(Z3,1,4);
     for (int c = 0; c<1; c++){
         for(int d = 0; d<4; d++){
-            printf("%f \n",Z3[c][d]);
+            printf("%f \n",A3[c][d]);
         }
     }
     
