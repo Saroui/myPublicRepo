@@ -10,10 +10,7 @@ double **initialize(int f, int c);
 double **sumMatrix(double **A, double **B, int f, int c);
 double **multMatrix(double **A, double **B, int fa, int fb, int ca, int cb);
 double **maxMatrix(double **A, double **B, int f, int c);
-double exponential(double x);
 double **sigmoide(double **A, int f, int c);
-int factorial(int x);
-double pot(double x, double i);
 
 
 
@@ -154,41 +151,14 @@ double **maxMatrix(double **A, double **B, int f, int c){
 }
 
 
-double exponential(double x){
-    double out=0;
-    int n=15;
-    for(int i=0;i<n;i++){
-        out+=(pot(x,i)/factorial(i));
-    }
-    return out;
-}
-
 double **sigmoide(double ** A, int f, int c){
     double **out=initialize(f,c);
     for(int i=0;i<f;i++){
         for(int j=0;j<c;j++){
-            out[i][j]=1/(1+exponential(-A[i][j]));
+            out[i][j]=1/(1+exp(-A[i][j]));
         }
     }
     return out;
 }
 
 
-
-int factorial(int x){
-    if (x == 1){
-        return 1;
-    }
-    
-    return (x * factorial(x-1));
-}
-
-double pot(double x, double i){
-    double resultado = x;
-    while (i > 1)
-    {
-        resultado = resultado * x;
-        i--;
-    }
-    return resultado;
-}
