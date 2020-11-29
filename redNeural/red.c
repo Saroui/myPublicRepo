@@ -87,7 +87,7 @@ int main(){
     A2 = maxMatrix(cero2,Z2,5,4);
     Z3 = multMatrix(W3,A2, 1, 5, 5, 4);
     Z3 = sumMatrix(Z3,B3,1,4);
-    // A3 = sigmoide(Z3,1,4);
+    A3 = sigmoide(Z3,1,4);
     for (int c = 0; c<1; c++){
         for(int d = 0; d<4; d++){
             printf("%f \n",A3[c][d]);
