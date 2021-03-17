@@ -4,7 +4,7 @@
 #include <tutorial/typedef.h>
 
 int main(int argc, char **argv){
-    double velocity
+    double velocity;
     
     ros::init(argc, argv, "Square");
     ros::NodeHandem nh;
